@@ -2,6 +2,7 @@ import Index from './views/Index.vue';
 import Home from './views/Home.vue';
 import SignUp from './views/SignUp.vue';
 import SignIn from './views/SignIn.vue';
+import ForgotPassword from './views/ForgotPassword.vue';
 export const  routes = [
     {
         path: '',
@@ -22,5 +23,9 @@ export const  routes = [
         path: '/signIn',
         name: 'signIn',
         component: SignIn
+    },{
+        path: '/forgotPassword',
+        name: 'forgotPassword',
+        component: ForgotPassword
     }
 ];

@@ -2,10 +2,11 @@
   <div class="outer-container">
     <HomeHeader></HomeHeader>
     <div>
+      <div class="background"></div>
       <div class="content">
-        <div class="container-fluid" style="padding: 2%;">
+        <div class="container-fluid" style="padding: 2%">
           <div class="topic">Why use All In One Mart</div>
-          <div class="row" style="margin-top: 2%;">
+          <div class="row" style="margin-top: 2%">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="card-small"></div>
             </div>
@@ -35,6 +36,10 @@ export default {
 </script>
 
 <style scoped>
+.background {
+  background-image: url("../assets/images/home-background.jpg");
+  height: 50vh;
+}
 .outer-container {
   background-color: white;
 }

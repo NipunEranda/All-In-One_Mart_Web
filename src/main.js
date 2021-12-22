@@ -30,6 +30,9 @@ Vue.mixin({
     },
     goToSignIn: function(){
       this.$router.push({ name: "signIn" });
+    },
+    goToForgotPassword: function(){
+      this.$router.push({name: "forgotPassword"})
     }
   }
 });
