@@ -1,10 +1,14 @@
 <template>
   <div>
-    home
+    <Header></Header>
+    <div>Home</div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 export default {
   data: function () {
     return {
@@ -19,11 +23,11 @@ export default {
       debouncedInput: "",
     };
   },
-  methods: {
-    
-  },
-  computed: {
-    
+  methods: {},
+  computed: {},
+  components: {
+    Header,
+    Footer,
   },
 };
 </script>
