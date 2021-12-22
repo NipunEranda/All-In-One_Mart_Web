@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="flux-container">
-      <div class="row" style="margin: 0; padding: 0">
+      <Header></Header>
+      <div class="row" style="margin: 0; padding: 2% 5% 2% 5%">
         <div class="col-lg-5 coverBackground" style="margin: 0; padding: 0">
           <div class="backgroundFilter">
             <img src="../assets/logo.png" alt="" />
@@ -9,7 +10,10 @@
             <h6>Buy what you need, Sell what you desire.</h6>
           </div>
         </div>
-        <div class="col-sm" style="margin: 50px 0 50px 0">
+        <div
+          class="col-sm"
+          style="padding: 4%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3)"
+        >
           <div class="row reg-container">
             <div class="col-lg-6">
               <div class="formContent">
@@ -111,8 +115,9 @@
           </div>
           <div class="row" style="padding: 0; margin: 0; margin-top: 25px">
             <div>
-              <div class="button btn btn-success" v-on:click="register">Register</div>
-              <div class="button btn btn-danger" v-on:click="goToHome">Cancel</div>
+              <div class="button btn btn-success" v-on:click="register">
+                Register
+              </div>
             </div>
           </div>
         </div>
@@ -122,6 +127,7 @@
 </template>
 
 <script>
+import Header from "../components/HomeHeader.vue";
 export default {
   data: function () {
     return {
@@ -134,112 +140,21 @@ export default {
       email: "",
       password: "",
       confirmPassword: "",
-      role: ""
+      role: "",
     };
   },
   methods: {
-    register: function(){
+    register: function () {
       alert("registration successfull!");
     },
   },
   computed: {},
+  components: {
+    Header,
+  },
 };
 </script>
 
-<style scoped>
-.coverBackground {
-  background-image: url("../assets/images/home-background.jpg");
-  height: 100vh;
-}
-.backgroundFilter {
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100vh;
-  width: 100%;
-  color: white;
-}
-
-.backgroundFilter img {
-  margin-left: 37.5%;
-  margin-top: 40%;
-}
-
-.backgroundFilter h1,
-h6 {
-    font-size: 3rem;
-  text-align: center;
-}
-
-.backgroundFilter h1 {
-  top: 50%;
-  left: 12.5%;
-}
-.backgroundFilter h6 {
-    font-size: 1rem;
-  top: 57%;
-  left: 11%;
-}
-.reg-container {
-  padding: 0;
-  margin: 0;
-}
-
-.formContent {
-  padding: 0 10% 0 10%;
-}
-
-input[type="text"] {
-  box-sizing: border-box;
-  border: 1 px solid #ebebeb;
-  padding: 14 px 20 px;
-  border-radius: 5 px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5 px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  font-size: 14px;
-  margin-bottom: 30px;
-  height: 5vh;
-}
-
-.inputlabel,
-input[type="text"] {
-  font-weight: bold;
-  margin-top: 10px;
-  font-family: "Poppins";
-  display: block;
-  width: 100%;
-}
-
-input[type="text"],
-select,
-textarea {
-  outline: none;
-  appearance: unset !important;
-  -moz-appearance: unset !important;
-  -webkit-appearance: unset !important;
-  -o-appearance: unset !important;
-  -ms-appearance: unset !important;
-}
-
-input.error {
-  border: 1px solid #c70000;
-}
-
-.radioButtonContainer {
-  margin-top: 20px;
-  font-size: 16px;
-  font-family: "Poppins";
-}
-
-.button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 6.5%;
-  font-size: 16px;
-  width: 40%;
-}
+<style>
+@import url("../assets/css/signUp.css");
 </style>

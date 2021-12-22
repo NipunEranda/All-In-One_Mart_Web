@@ -2,12 +2,14 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import { routes } from './routes';
+import axios from 'axios';
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
+Vue.prototype.$http = axios;
 
 const router = new VueRouter({
   routes,
@@ -15,9 +17,17 @@ const router = new VueRouter({
 });
 
 Vue.mixin({
+  data: function () {
+    return {
+      
+    };
+  },
   methods: {
     goToHome: function() {
       this.$router.push({ name: "index" });
+    },
+    goToHomePage: function(){
+      this.$router.push({name: "home"});
     },
     goToAbout: function(){
       this.$router.push("/about");

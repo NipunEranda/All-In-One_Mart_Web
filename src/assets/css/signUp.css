@@ -1,0 +1,99 @@
+.coverBackground {
+  background-image: url("../images/home-background.jpg");
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.backgroundFilter {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding-top: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.backgroundFilter img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.backgroundFilter h1,
+h6 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.backgroundFilter h1 {
+  top: 50%;
+  left: 12.5%;
+}
+.backgroundFilter h6 {
+  font-size: 1rem;
+  top: 57%;
+  left: 11%;
+  margin-bottom: 30%;
+}
+.reg-container {
+  padding: 0;
+  margin: 0;
+}
+
+.formContent {
+  padding: 0 10% 0 10%;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  border: 1 px solid #ebebeb;
+  padding: 14 px 20 px;
+  border-radius: 5 px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5 px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 30px;
+  height: 5vh;
+}
+
+.inputlabel,
+input[type="text"] {
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "Poppins";
+  display: block;
+  width: 100%;
+}
+
+input[type="text"],
+select,
+textarea {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important;
+}
+
+input.error {
+  border: 1px solid #c70000;
+}
+
+.radioButtonContainer {
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: "Poppins";
+}
+
+.flux-container .button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: grid;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+  width: 70%;
+}
