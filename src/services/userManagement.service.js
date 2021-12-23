@@ -2,6 +2,7 @@ import { authHeader, router } from "../helper";
 import axios from "axios";
 import store from "../store/store";
 
+//Login Function
 function userLogin(email, password) {
   axios
     .post("http://localhost:5000/user/login", {

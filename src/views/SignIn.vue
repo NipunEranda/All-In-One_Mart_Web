@@ -43,10 +43,7 @@
                 placeholder="Your Password"
                 v-model="user.password"
               />
-              <div
-                class="button btn btn-success"
-                v-on:click="login"
-              >
+              <div class="button btn btn-success" v-on:click="login">
                 Login
               </div>
               <div class="row credentialsContent">
@@ -64,7 +61,7 @@
                   </div>
                 </div>
                 <div class="col-6" id="forgotPassword">
-                  <span v-on:click="forgotPassword">Forgot Password</span>
+                  <span v-on:click="goToForgotPassword">Forgot Password</span>
                 </div>
               </div>
               <div class="row signUpLink">
@@ -100,10 +97,7 @@
                 placeholder="Your Password"
                 v-model="user.password"
               />
-              <div
-                class="button btn btn-success"
-                v-on:click="login"
-              >
+              <div class="button btn btn-success" v-on:click="login">
                 Login
               </div>
               <div class="row credentialsContent">
@@ -121,7 +115,7 @@
                   </div>
                 </div>
                 <div class="col-6" id="forgotPassword">
-                  <span v-on:click="forgotPassword">Forgot Password</span>
+                  <span v-on:click="goToForgotPassword">Forgot Password</span>
                 </div>
               </div>
               <div class="row signUpLink">
@@ -156,9 +150,6 @@ export default {
   },
   methods: {
     ...mapActions(["userLogin"]),
-    forgotPassword: () => {
-      alert("lol");
-    },
     login() {
       this.userLogin(this.user);
     },
