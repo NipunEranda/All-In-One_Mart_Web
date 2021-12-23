@@ -136,7 +136,7 @@
 </template>
 
 <script>
-import Header from "../../components/HomeHeader.vue";
+import Header from "../../components/Header.vue";
 import { mapActions } from "vuex";
 export default {
   data: function() {

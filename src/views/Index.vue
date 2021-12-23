@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import HomeHeader from "../components/HomeHeader.vue";
-import HomeFooter from "../components/HomeFooter.vue";
+import HomeHeader from "../components/Header.vue";
+import HomeFooter from "../components/Footer.vue";
 export default {
   components: {
     HomeHeader,

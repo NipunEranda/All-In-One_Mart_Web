@@ -1,15 +1,15 @@
 <template>
-    <div class="container-fluid text-center bg-light p-5 fixed-bottom">
-    <p>Footer</p>
-</div>
+  <div>
+    <div class="flux-container content">COPYRIGHT © 2021 AIO MART CO., LTD.</div>
+  </div>
 </template>
 
-<script>
-export default {
-    
+<style scoped>
+.content {
+  padding: 40px 2% 2% 0;
+  text-align: center;
+  background-color: white;
+  height: 100px;
 }
-</script>
-
-<style>
-
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 </style>
