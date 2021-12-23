@@ -3,19 +3,28 @@
     <div class="flux-container">
       <Header></Header>
       <div class="d-lg-none" style="height: 5vh"></div>
+      <div class="d-none d-lg-block" style="height: 7vh"></div>
       <div class="loginCard">
         <div class="row">
-          <div class="d-none d-lg-block col-lg-6 loginCover" style="padding: 0">
+          <div
+            class="d-none d-lg-block col-lg-6 loginCover"
+            style="padding: 0;"
+          >
             <div class="backgroundFilter">
               <img src="../assets/logo.png" alt="" />
-              <h1>AIO MART</h1>
-              <h6>Buy what you need, Sell what you desire.</h6>
+              <h1 style="font-size:50px">AIO MART</h1>
+              <h6 style="font-size:15px">
+                Buy what you need, Sell what you desire.
+              </h6>
             </div>
           </div>
           <!-- Login Screen in mobile view -->
           <div class="col-lg-6 d-lg-none outerLoginContent">
             <div class="loginTitle">
               <h1 class="d-none d-lg-block">Sign In</h1>
+              <div class="d-lg-none">
+                <img src="../assets/logo.png" width="100px" alt="">
+              </div>
             </div>
             <div>
               <label for="email" class="inputlabel">EMAIL</label>
@@ -122,7 +131,7 @@
 import Header from "../components/HomeHeader.vue";
 import axios from "axios";
 export default {
-  data: function () {
+  data: function() {
     return {
       email: "namarasekara71@gmail.com",
       password: "4321",
@@ -153,7 +162,7 @@ export default {
         console.log(error);
       }
     },
-    forgotPassword: function () {
+    forgotPassword: function() {
       alert("Forgot password");
     },
   },
@@ -164,6 +173,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url("../assets/css/signIn.css");
 </style>

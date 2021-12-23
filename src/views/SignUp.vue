@@ -129,7 +129,7 @@
 <script>
 import Header from "../components/HomeHeader.vue";
 export default {
-  data: function () {
+  data: function() {
     return {
       firstName: "",
       lastName: "",
@@ -144,7 +144,7 @@ export default {
     };
   },
   methods: {
-    register: function () {
+    register: function() {
       alert("registration successfull!");
     },
   },
@@ -155,6 +155,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url("../assets/css/signUp.css");
 </style>
