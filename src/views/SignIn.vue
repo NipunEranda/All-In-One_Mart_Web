@@ -23,7 +23,7 @@
             <div class="loginTitle">
               <h1 class="d-none d-lg-block">Sign In</h1>
               <div class="d-lg-none">
-                <img src="../assets/logo.png" width="100px" alt="">
+                <img src="../assets/logo.png" width="100px" alt="" />
               </div>
             </div>
             <div>
@@ -33,6 +33,7 @@
                 type="text"
                 class="form-control"
                 placeholder="your Email"
+                v-model="user.email"
               />
               <label for="password" class="inputlabel">PASSWORD</label>
               <input
@@ -40,8 +41,14 @@
                 type="text"
                 class="form-control"
                 placeholder="Your Password"
+                v-model="user.password"
               />
-              <div class="button btn btn-success" v-on:click="login">Login</div>
+              <div
+                class="button btn btn-success"
+                v-on:click="login"
+              >
+                Login
+              </div>
               <div class="row credentialsContent">
                 <div class="col-6" id="rememberMe">
                   <div class="form-check">
@@ -83,6 +90,7 @@
                 type="text"
                 class="form-control"
                 placeholder="your Email"
+                v-model="user.email"
               />
               <label for="password" class="inputlabel">PASSWORD</label>
               <input
@@ -90,8 +98,14 @@
                 type="password"
                 class="form-control"
                 placeholder="Your Password"
+                v-model="user.password"
               />
-              <div class="button btn btn-success" v-on:click="login">Login</div>
+              <div
+                class="button btn btn-success"
+                v-on:click="login"
+              >
+                Login
+              </div>
               <div class="row credentialsContent">
                 <div class="col-6" id="rememberMe">
                   <div class="form-check">
@@ -129,41 +143,24 @@
 
 <script>
 import Header from "../components/HomeHeader.vue";
-import axios from "axios";
+import { mapActions } from "vuex";
 export default {
   data: function() {
     return {
-      email: "namarasekara71@gmail.com",
-      password: "4321",
+      user: {
+        email: "",
+        password: "",
+      },
       result: "",
     };
   },
   methods: {
-    async login() {
-      try {
-        await axios
-          .post("http://localhost:5000/user/login", {
-            email: this.email,
-            password: this.password,
-          })
-          .then((Response) => {
-            if (Response.status === 200) {
-              window.localStorage.setItem("token", Response.data.data.token);
-              this.goToHomePage();
-            } else {
-              alert("login failed");
-              this.goToSignIn();
-            }
-          })
-          .catch((err) => {
-            alert("login Failed");
-          });
-      } catch (error) {
-        console.log(error);
-      }
+    ...mapActions(["userLogin"]),
+    forgotPassword: () => {
+      alert("lol");
     },
-    forgotPassword: function() {
-      alert("Forgot password");
+    login() {
+      this.userLogin(this.user);
     },
   },
   computed: {},

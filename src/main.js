@@ -1,22 +1,15 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VueRouter from "vue-router";
-import store from "./store";
-import { routes } from "./routes";
+import store from "./store/store";
 import axios from "axios";
 import BootstrapVue from "bootstrap-vue/dist/bootstrap-vue.esm";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { router } from './helper';
 
-Vue.use(VueRouter);
 Vue.use(BootstrapVue);
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
-
-const router = new VueRouter({
-  routes,
-  mode: "history",
-});
 
 Vue.mixin({
   data: function() {
@@ -24,25 +17,25 @@ Vue.mixin({
   },
   methods: {
     goToHome: function() {
-      this.$router.push({ name: "index" });
+      router.push({ name: "index" });
     },
     goToHomePage: function() {
-      this.$router.push({ name: "home" });
+      router.push({ name: "home" });
     },
     goToAbout: function() {
-      this.$router.push("/about");
+      router.push("/about");
     },
     goToContact: function() {
-      this.$router.push("/contact");
+      router.push("/contact");
     },
     goToSignUp: function() {
-      this.$router.push({ name: "signUp" });
+      router.push({ name: "signUp" });
     },
     goToSignIn: function() {
-      this.$router.push({ name: "signIn" });
+      router.push({ name: "signIn" });
     },
     goToForgotPassword: function() {
-      this.$router.push({ name: "forgotPassword" });
+      router.push({ name: "forgotPassword" });
     },
   },
 });
