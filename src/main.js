@@ -5,7 +5,7 @@ import axios from "axios";
 import BootstrapVue from "bootstrap-vue/dist/bootstrap-vue.esm";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { router } from './helper';
+import { router } from "./helper";
 
 Vue.use(BootstrapVue);
 Vue.prototype.$http = axios;
@@ -23,10 +23,10 @@ Vue.mixin({
       router.push({ name: "home" });
     },
     goToAbout: function() {
-      router.push("/about");
+      router.push({ name: "about" });
     },
     goToContact: function() {
-      router.push("/contact");
+      router.push({ name: "contact" });
     },
     goToSignUp: function() {
       router.push({ name: "signUp" });

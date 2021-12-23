@@ -32,12 +32,7 @@
                   placeholder="Last Name"
                 />
                 <label for="dob" class="inputlabel">Date of Birth</label>
-                <input
-                  id="dob"
-                  type="text"
-                  class="form-control"
-                  placeholder="Your date of birth"
-                />
+                <b-form-datepicker id="dob" size="lg" locale="en" style="margin-bottom: 30px;"></b-form-datepicker>
                 <label for="phoneNo" class="inputlabel">Mobile</label>
                 <input
                   id="phoneNo"
