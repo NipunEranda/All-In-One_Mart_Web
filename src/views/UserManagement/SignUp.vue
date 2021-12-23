@@ -5,7 +5,7 @@
       <div class="row" style="margin: 0; padding: 2% 5% 2% 5%">
         <div class="col-lg-5 coverBackground" style="margin: 0; padding: 0">
           <div class="backgroundFilter">
-            <img src="../assets/logo.png" alt="" />
+            <img src="../../assets/logo.png" alt="" />
             <h1>Register Now</h1>
             <h6>Buy what you need, Sell what you desire.</h6>
           </div>
@@ -127,7 +127,7 @@
 </template>
 
 <script>
-import Header from "../components/HomeHeader.vue";
+import Header from "../../components/HomeHeader.vue";
 export default {
   data: function() {
     return {
@@ -156,5 +156,5 @@ export default {
 </script>
 
 <style scoped>
-@import url("../assets/css/signUp.css");
+@import url("../../assets/css/signUp.css");
 </style>

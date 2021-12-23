@@ -11,7 +11,7 @@
             style="padding: 0;"
           >
             <div class="backgroundFilter">
-              <img src="../assets/logo.png" alt="" />
+              <img src="../../assets/logo.png" alt="" />
               <h1 style="font-size:50px">AIO MART</h1>
               <h6 style="font-size:15px">
                 Buy what you need, Sell what you desire.
@@ -23,7 +23,7 @@
             <div class="loginTitle">
               <h1 class="d-none d-lg-block">Sign In</h1>
               <div class="d-lg-none">
-                <img src="../assets/logo.png" width="100px" alt="" />
+                <img src="../../assets/logo.png" width="100px" alt="" />
               </div>
             </div>
             <div>
@@ -136,7 +136,7 @@
 </template>
 
 <script>
-import Header from "../components/HomeHeader.vue";
+import Header from "../../components/HomeHeader.vue";
 import { mapActions } from "vuex";
 export default {
   data: function() {
@@ -162,5 +162,5 @@ export default {
 </script>
 
 <style scoped>
-@import url("../assets/css/signIn.css");
+@import url("../../assets/css/signIn.css");
 </style>

@@ -1,8 +1,8 @@
 import Index from './views/Index.vue';
 import Home from './views/Home.vue';
-import SignUp from './views/SignUp.vue';
-import SignIn from './views/SignIn.vue';
-import ForgotPassword from './views/ForgotPassword.vue';
+import SignUp from './views/UserManagement/SignUp.vue';
+import SignIn from './views/UserManagement/SignIn.vue';
+import ForgotPassword from './views/UserManagement/ForgotPassword.vue';
 export const  routes = [
     {
         path: '',

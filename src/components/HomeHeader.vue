@@ -5,9 +5,10 @@
         <a class="navbar-brand" href="" v-on:click="goToHome"
           ><img
             src="../assets/logo.png"
-            width="35px"
-            height="35px"
+            width="40px"
+            height="40px"
             alt=""
+            style="margin-right: 10px;top:0;margin-top:-5px"
           /><span style="font-size: 25px">AIO Mart</span></a
         >
         <button
